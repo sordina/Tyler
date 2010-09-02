@@ -9,6 +9,6 @@ Take a source:
 
 Tile it!
 
-<div style="height:300px; background:url(Tyler/raw/master/examples/TylerTiled.png);">
-	&nbsp;
-</div>
+![Tiled](Tyler/raw/master/examples/TylerTiled.png)
+![Tiled](Tyler/raw/master/examples/TylerTiled.png)
+![Tiled](Tyler/raw/master/examples/TylerTiled.png)
