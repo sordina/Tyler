@@ -10,8 +10,12 @@ Gem::Specification.new do |s|
 	s.description = %q{Allows easy generation of tiling textures.}
 	s.files = [ "README.md", "demo.rb", "lib/tyler.rb"]
 
-	s.add_dependency 'rmagick' '>=2.0'
-
 	s.rubyforge_project = "nowarning"
+
+		if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+			s.add_runtime_dependency(%q<rmagick>, [">= 2"])
+		else
+			s.add_dependency(%q<rmagick>, [">= 2"])
+		end
 
 end
