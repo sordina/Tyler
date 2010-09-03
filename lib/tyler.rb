@@ -11,10 +11,16 @@ class Tyler
 			x_ = x / 2
 			y_ = y / 2
 
-			vig = i.vignette
-			rot = vig.roll x_, y_
+			t = i.clone
+			t.background_color = 'transparent'
+			v = t.vignette
 
-			rot.dissolve vig, 0.50
+			result = v.roll(x_,y_).dissolve v, 1.0
+			result = result.roll(x_,0).dissolve v, 1.0
+			result = result.roll(0,y_).dissolve v, 1.0
+
+			result.alpha Magick::DeactivateAlphaChannel
+			result
 		end
 	end
 end
