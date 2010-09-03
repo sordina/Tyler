@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
 	s.name = %q{tyler}
-	s.version = "0.0.1"
+	s.version = "0.0.2"
 	s.date = %q{2010-09-02}
 	s.authors = ["Lyndon Maydwell"]
 	s.email = %q{maydwell@gmail.com}
