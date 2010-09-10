@@ -4,8 +4,19 @@ require 'RMagick'
 class Tyler
 	class << self
 		def tile file
-			l = Magick::ImageList.new file
-			i = l[0]
+			i = nil
+
+			case file
+			when Magick::Image
+				i = file
+			when Magick::ImageList
+			when File, String
+				l = Magick::ImageList.new file
+				i = l[0]
+			else
+				i = Magick::Image.new file
+			end
+
 			x = i.columns
 			y = i.rows
 			x_ = x / 2
