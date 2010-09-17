@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+
+raise "Requires two arguments <input image> and <output image>." unless ARGV.length == 2
+
+require 'tyler'
+
+Tyler::tile(ARGV[0]).write ARGV[1]
